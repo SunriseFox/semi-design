@@ -203,11 +203,12 @@ class Checkbox extends BaseComponent<CheckboxProps, CheckboxState> {
         });
 
         const name = inGroup && this.context.checkboxGroup.name;
+        const xSemiPropChildren = this.props['x-semi-children-alias'] || 'children';
 
         const renderContent = () => (
             <>
                 {children ? (
-                    <span id={this.addonId} className={`${prefix}-addon`} x-semi-prop="children">
+                    <span id={this.addonId} className={`${prefix}-addon`} x-semi-prop={xSemiPropChildren}>
                         {children}
                     </span>
                 ) : null}
